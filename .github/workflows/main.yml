@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: 检查并删除垃圾评论
         env:
-          AKISMET_API_KEY: ${{ cec115cc6537 }}
-          GITHUB_TOKEN: ${{ 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 }}
+          AKISMET_API_KEY: ${{ secrets.AKISMET_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           COMMENT_BODY: ${{ github.event.comment.body }}
           COMMENT_AUTHOR: ${{ github.event.comment.user.login }}
           COMMENT_NODE_ID: ${{ github.event.comment.node_id }}
